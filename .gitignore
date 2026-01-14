@@ -1,0 +1,11 @@
+# historique de calculs
+history.txt
+
+# fichiers temporaires de Python
+__pycache__/
+*.py[cod]
+*.pyc
+
+# fichiers systèmes
+.DS_Store
+Thumbs.db
