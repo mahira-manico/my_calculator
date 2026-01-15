@@ -7,13 +7,13 @@ def save_history(entry, calculator_result):
 def display_history():
  try:
    with open("history.txt", "r") as fichier:
-      print("--Calculs history--\n")
-      for content in fichier:
-       if not content:
-         print("Empty history!")
-       else:
-         print(content)
-      
+      data = fichier.read()
+      if not data.strip():
+       print("Empty history!")
+      else:
+       print("--Calculs history--\n")
+       print(data)
+ 
  except FileNotFoundError:
     print("History empty, no files found")
 

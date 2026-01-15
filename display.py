@@ -1,5 +1,6 @@
 def display_menu():
    
+   print("--Welcome to PowerCalculator!--")
    print("1. calculator")
    print("2. see history")
    print("3. remove history")

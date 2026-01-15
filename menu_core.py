@@ -29,27 +29,30 @@ def menu_core():
       while True:
        
        clear_screen()
-       entry=input("enter your operation (with spaces): ")
-       entry_user=entry.split()
-       
-       if not entry_user:
+       entry=input("enter your operation: ")        
+        
+       if not entry.strip():
         print("please enter an operation!")
         continue
+       
+       entry_user=parsing(entry)
 
        if not verify_all(entry_user):
         time.sleep(1)
         continue
+       
+       entry_user=parentheses(entry_user)
        
        calculator_result=priorities_calcul(entry_user)
 
        if calculator_result is None:
         continue
        
-       display_result(calculator_result)
-
        if save_history(entry, calculator_result):
         print("Calcul saved to history")
        
+       display_result(calculator_result)
+
        retry_op=input("do you want to try again?(y/n)").lower()
        if retry_op=="y":
         continue
