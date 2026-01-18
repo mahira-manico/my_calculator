@@ -4,6 +4,7 @@ from display import *
 from history import *
 from verification_errors import *
 import time
+import colored
 
 def menu_core():
  
@@ -13,7 +14,7 @@ def menu_core():
   try:
    
     display_menu()
-    redirection=int(input("what do you want to do?: "))
+    redirection=int(input(f"{colored.fg(199)}what do you want to do?: "))
    
     if redirection not in range(0,4):
      print("Please enter 1, 2 or 3")
@@ -29,7 +30,7 @@ def menu_core():
       while True:
        
        clear_screen()
-       entry=input("enter your operation: ")        
+       entry=input(f"{colored.fg(5)}enter your operation: ")        
         
        if not entry.strip():
         print("please enter an operation!")
@@ -53,11 +54,11 @@ def menu_core():
        
        display_result(calculator_result)
 
-       retry_op=input("do you want to try again?(y/n)").lower()
+       retry_op=input(f"{colored.fg(5)}do you want to try again?(y/n)").lower()
        if retry_op=="y":
         continue
        else:
-        print("returning to menu..")
+        print(f"{colored.fg(177)}returning to menu..")
         time.sleep(1)
         break
 
@@ -66,7 +67,7 @@ def menu_core():
       clear_screen
       while True:
        display_history()
-       stay=input("tap menu to quit: ").lower()
+       stay=input(f"{colored.fg(5)}tap menu to quit: ").lower()
        if stay=="menu":
         break
  
@@ -77,7 +78,7 @@ def menu_core():
    print("Please enter a number!")
    time.sleep(1)
   except KeyboardInterrupt:
-   print("Goodbye!")
+   print(f"{colored.fg(177)}Goodbye!")
    time.sleep(1)
    break
  clear_screen()
