@@ -16,7 +16,7 @@ def menu_core():
     display_menu()
     redirection=int(input(f"{colored.fg(199)}what do you want to do?: "))
    
-    if redirection not in range(0,4):
+    if redirection not in range(1,4):
      print("Please enter 1, 2 or 3")
      time.sleep(1)
      continue
@@ -36,15 +36,15 @@ def menu_core():
         print("please enter an operation!")
         continue
        
-       entry_user=parsing(entry)
+       user_entry=parsing(entry)
 
-       if not verify_all(entry_user):
+       if not verify_all(user_entry):
         time.sleep(1)
         continue
        
-       entry_user=parentheses(entry_user)
+       user_entry=parentheses(user_entry)
        
-       calculator_result=priorities_calcul(entry_user)
+       calculator_result=priorities_calcul(user_entry)
 
        if calculator_result is None:
         continue

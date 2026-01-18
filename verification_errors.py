@@ -29,7 +29,7 @@ def verification_valid_entry(list_entry):
     
         for i in range(len(list_entry) - 1):
           if is_number(list_entry[i]) and list_entry[i+1] == "(":
-            print("Error! Add "*" before '('")
+            print("Error! Add \"*\" before '('")
             return False
             
    return True

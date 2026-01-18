@@ -68,7 +68,7 @@ def parsing(list_entry):
    operators=["**","//","*","%","/","-","+","(", ")"]
    while i<len(text):
       
-      if text[i]== "-" and (i==0 or text[i-1] in "+-*/%"):
+      if text[i]== "-" and (i==0 or text[i-1] in "+-*/%**//()"):
             current_number+=text[i]
             i += 1
             if i >= len(text): break
