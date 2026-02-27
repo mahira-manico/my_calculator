@@ -8,8 +8,8 @@ def save_history(entry, calculator_result):
 def display_history():
  try:
    with open("history.txt", "r") as fichier:
-      data = fichier.read()
-      if not data.strip():
+      data=fichier.read()
+      if not data:
        print("Empty history!")
       else:
        print(f"{colored.fg(177)}--Calculs history--\n")

@@ -8,9 +8,7 @@ import colored
 
 def menu_core():
  
- clear_screen()
  while True:
-  clear_screen()
   try:
    
     display_menu()
@@ -29,7 +27,6 @@ def menu_core():
      case 1:
       while True:
        
-       clear_screen()
        entry=input(f"{colored.fg(5)}enter your operation: ")        
         
        if not entry.strip():
